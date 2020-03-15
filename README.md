@@ -3,7 +3,7 @@
 ## instruction 
 
 `npm install`
-`npm link` => link script to cli than you can directly call with "blackjack"
+`npm link` => link script to cli than you can directly call with
 `blackjack`
 
 After app running will ask your name. Enter the name and start playing.

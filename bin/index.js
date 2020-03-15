@@ -60,6 +60,7 @@ rl.question("What is your name ? : ", function(name) {
           startBlackJack();
         } else if (input.trim() === "n") {
           console.log("You selected not to shuffle");
+          console.log("Your deck is:" , deck);
           startBlackJack();
         } else {
           wrongInput();
