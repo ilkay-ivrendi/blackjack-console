@@ -176,7 +176,7 @@ function checkHandScore(player) {
 
 function checkBlackJack(sum, player) {
   if (sum >= 21) {
-    console.log("BlackJack!!!\n");
+    console.log("\n############\nBlackJack!!!\n");
     console.log(player.name, "Lost! / Total:", sum);
     const winner = players.find(x => x.name !== player.name);
     console.log("Winner is: ", winner.name);
@@ -247,15 +247,15 @@ async function processLineByLine(fileName) {
     tableDeck = setCardDeck(suits, values);
     tmpDeck = line.split(",");
     console.log("Temporary Deck: ", tmpDeck, tmpDeck.length);
-    let lucky = [];
+    var inputDeck = [];
     for (let i = 0; i < tableDeck.length; i++) {
       for (let x = 0; x <= tmpDeck.length; x++) {
         if (tableDeck[i].cardID === tmpDeck[x]) {
-          lucky.push(tableDeck[i]);
+          inputDeck.push(tableDeck[i]);
         }
       }
     }
-    deck = lucky;
+    deck = inputDeck;
     console.log("New Deck!!!", deck);
   }
   startBlackJack();
